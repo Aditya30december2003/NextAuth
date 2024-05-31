@@ -16,6 +16,7 @@ export async function POST(request:NextRequest){
 
         if(!user){
             return NextResponse.json({message:"User not found , sign up!"} , {status: 400})
+            alert("User not found, Please signup!!")
         }
 
 
@@ -23,6 +24,7 @@ export async function POST(request:NextRequest){
 
         if(!validPassword){
             return NextResponse.json({message:"Invalid password"} , {status: 400})
+            alert("Invalid Password")
         }
 
         const tokenData ={
